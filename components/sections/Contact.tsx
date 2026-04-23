@@ -1,5 +1,7 @@
 import Blob from "../Blob";
 import ContactForm from "../ContactForm";
+import Reveal from "../motion/Reveal";
+import { StaggerGroup, StaggerItem } from "../motion/Stagger";
 
 const COORDS: Array<[string, string, string]> = [
   ["✉️", "Email", "gaellegenly@icloud.com"],
@@ -20,7 +22,7 @@ export default function Contact() {
       />
       <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-20 lg:pt-24 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-          <div>
+          <Reveal direction="right">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               Prendre contact
             </div>
@@ -32,11 +34,14 @@ export default function Contact() {
               Écrivez-moi, je vous réponds toujours &mdash; promis, sous 24h.
             </p>
 
-            <div className="mt-10 flex flex-col gap-3.5">
+            <StaggerGroup
+              className="mt-10 flex flex-col gap-3.5"
+              staggerChildren={0.07}
+            >
               {COORDS.map(([e, k, v]) => (
+                <StaggerItem key={k}>
                 <div
-                  key={k}
-                  className="bg-bone border border-lavender flex items-center gap-4"
+                  className="bg-bone border border-lavender flex items-center gap-4 transition-transform duration-200 hover:translate-x-1"
                   style={{ borderRadius: 18, padding: "16px 20px" }}
                 >
                   <div className="text-[22px]">{e}</div>
@@ -49,11 +54,14 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
+                </StaggerItem>
               ))}
-            </div>
-          </div>
+            </StaggerGroup>
+          </Reveal>
 
-          <ContactForm />
+          <Reveal direction="left" delay={0.15}>
+            <ContactForm />
+          </Reveal>
         </div>
       </div>
     </section>

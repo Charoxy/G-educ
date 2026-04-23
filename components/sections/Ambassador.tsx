@@ -1,4 +1,6 @@
 import Blob from "../Blob";
+import Reveal from "../motion/Reveal";
+import { StaggerGroup, StaggerItem } from "../motion/Stagger";
 
 const TIERS = [
   {
@@ -42,7 +44,7 @@ export default function Ambassador() {
       />
       <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-center">
-          <div>
+          <Reveal direction="right">
             <div
               className="inline-block bg-peach text-ink uppercase font-extrabold mb-5"
               style={{
@@ -73,13 +75,13 @@ export default function Ambassador() {
             >
               Comment ça marche ? →
             </button>
-          </div>
+          </Reveal>
 
-          <div className="flex flex-col gap-3.5">
+          <StaggerGroup className="flex flex-col gap-3.5" staggerChildren={0.1}>
             {TIERS.map((t) => (
+              <StaggerItem key={t.tier}>
               <div
-                key={t.tier}
-                className="grid items-center"
+                className="grid items-center transition-transform duration-300 hover:translate-x-1"
                 style={{
                   background: t.bg,
                   color: t.text,
@@ -111,8 +113,9 @@ export default function Ambassador() {
                 </div>
                 <div className="text-[28px] font-extrabold opacity-30">→</div>
               </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerGroup>
         </div>
       </div>
     </section>

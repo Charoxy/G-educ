@@ -1,3 +1,6 @@
+import Reveal from "../motion/Reveal";
+import { StaggerGroup, StaggerItem } from "../motion/Stagger";
+
 type Quote = {
   t: string;
   name: string;
@@ -34,7 +37,7 @@ export default function Testimonials() {
   return (
     <section className="bg-sand-light">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14">
           <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
             Ils m&rsquo;ont fait confiance
           </div>
@@ -42,13 +45,16 @@ export default function Testimonials() {
             De vraies histoires,{" "}
             <span className="text-plum">de vrais changements.</span>
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerGroup
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          staggerChildren={0.12}
+        >
           {QUOTES.map((q, i) => (
+            <StaggerItem key={i}>
             <div
-              key={i}
-              className="bg-bone border border-lavender flex flex-col"
+              className="bg-bone border border-lavender flex flex-col h-full transition-shadow duration-300 hover:shadow-[0_24px_40px_-20px_rgba(107,74,122,0.25)]"
               style={{
                 borderRadius: 28,
                 padding: "32px 28px",
@@ -56,7 +62,7 @@ export default function Testimonials() {
                 boxShadow:
                   i === 1
                     ? "0 24px 40px -20px rgba(107,74,122,0.25)"
-                    : "none",
+                    : undefined,
               }}
             >
               <div className="text-[18px] text-peach mb-3">★★★★★</div>
@@ -78,8 +84,9 @@ export default function Testimonials() {
                 </div>
               </div>
             </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );

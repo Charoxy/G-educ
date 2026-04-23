@@ -1,5 +1,7 @@
 import Blob from "../Blob";
 import PlaceholderImg from "../PlaceholderImg";
+import Reveal from "../motion/Reveal";
+import { StaggerGroup, StaggerItem } from "../motion/Stagger";
 
 const CREDS: Array<[string, string]> = [
   ["ACACED", "Certification officielle bien-être animal"],
@@ -21,7 +23,7 @@ export default function About() {
 
       <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-14 items-center">
-          <div className="relative max-w-[420px]">
+          <Reveal direction="right" className="relative max-w-[420px]">
             <PlaceholderImg
               label="Gaëlle Genly"
               tone="lavender"
@@ -46,9 +48,9 @@ export default function About() {
                 — Gaëlle
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div>
+          <Reveal direction="left" delay={0.15}>
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               À propos de moi
             </div>
@@ -71,11 +73,14 @@ export default function About() {
               peu de votre famille &mdash; je le prends très au sérieux.
             </p>
 
-            <div className="mt-9 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <StaggerGroup
+              className="mt-9 grid grid-cols-1 sm:grid-cols-2 gap-3.5"
+              staggerChildren={0.08}
+            >
               {CREDS.map(([t, s]) => (
+                <StaggerItem key={t}>
                 <div
-                  key={t}
-                  className="bg-sand-light flex gap-3 items-start"
+                  className="bg-sand-light flex gap-3 items-start h-full"
                   style={{ padding: "16px 18px", borderRadius: 16 }}
                 >
                   <div className="w-6 h-6 rounded-full bg-sage text-bone flex items-center justify-center text-[12px] font-extrabold shrink-0">
@@ -90,9 +95,10 @@ export default function About() {
                     </div>
                   </div>
                 </div>
+                </StaggerItem>
               ))}
-            </div>
-          </div>
+            </StaggerGroup>
+          </Reveal>
         </div>
       </div>
     </section>

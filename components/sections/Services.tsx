@@ -1,10 +1,12 @@
 import Btn from "../Btn";
+import Reveal from "../motion/Reveal";
+import { StaggerGroup, StaggerItem } from "../motion/Stagger";
 
 export default function Services() {
   return (
     <section className="relative">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
-        <div className="text-center mb-14">
+        <Reveal className="text-center mb-14">
           <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
             Prestations &amp; tarifs
           </div>
@@ -12,12 +14,16 @@ export default function Services() {
             Choisissez la formule qui{" "}
             <span className="highlight-sage">vous ressemble.</span>
           </h2>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:items-stretch">
+        <StaggerGroup
+          className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:items-stretch"
+          staggerChildren={0.12}
+        >
+          <StaggerItem className="h-full">
           {/* Bilan */}
           <div
-            className="bg-sand-light border border-sand flex flex-col"
+            className="bg-sand-light border border-sand flex flex-col h-full transition-transform duration-300 hover:-translate-y-1"
             style={{ borderRadius: 28, padding: "36px 30px" }}
           >
             <div className="text-[22px] mb-[18px]">🤝</div>
@@ -46,10 +52,12 @@ export default function Services() {
               Réserver →
             </Btn>
           </div>
+          </StaggerItem>
 
+          <StaggerItem className="h-full">
           {/* 1h — featured */}
           <div
-            className="bg-plum text-bone relative flex flex-col lg:-translate-y-2"
+            className="bg-plum text-bone relative flex flex-col h-full lg:-translate-y-2 transition-transform duration-300 hover:lg:-translate-y-3"
             style={{
               borderRadius: 28,
               padding: "36px 30px",
@@ -96,10 +104,12 @@ export default function Services() {
               Réserver une séance →
             </button>
           </div>
+          </StaggerItem>
 
+          <StaggerItem className="h-full">
           {/* Pack 6h */}
           <div
-            className="bg-bone relative flex flex-col"
+            className="bg-bone relative flex flex-col h-full transition-transform duration-300 hover:-translate-y-1"
             style={{
               borderRadius: 28,
               padding: "36px 30px",
@@ -152,19 +162,22 @@ export default function Services() {
               Choisir ce pack →
             </Btn>
           </div>
-        </div>
+          </StaggerItem>
+        </StaggerGroup>
 
-        <div
-          className="mt-8 bg-sand-light flex items-center justify-center gap-3 text-[14px] text-ink/80 text-center"
-          style={{ borderRadius: 20, padding: "20px 28px" }}
-        >
-          <span className="text-[20px]">🏡</span>
-          <span>
-            <strong className="text-plum">Adoptants de refuge :</strong> bilan
-            comportemental offert sur présentation du certificat
-            d&rsquo;adoption.
-          </span>
-        </div>
+        <Reveal delay={0.1} className="mt-8">
+          <div
+            className="bg-sand-light flex items-center justify-center gap-3 text-[14px] text-ink/80 text-center"
+            style={{ borderRadius: 20, padding: "20px 28px" }}
+          >
+            <span className="text-[20px]">🏡</span>
+            <span>
+              <strong className="text-plum">Adoptants de refuge :</strong> bilan
+              comportemental offert sur présentation du certificat
+              d&rsquo;adoption.
+            </span>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
