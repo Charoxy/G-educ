@@ -20,13 +20,13 @@ export default function Contact() {
         className="absolute opacity-50 pointer-events-none"
         style={{ top: 40, right: -60 }}
       />
-      <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-20 lg:pt-24 pb-16">
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
           <Reveal direction="right">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               Prendre contact
             </div>
-            <h2 className="text-[40px] sm:text-[48px] lg:text-[56px] leading-[1.05] m-0 font-extrabold text-ink tracking-[-0.02em]">
+            <h2 className="text-[32px] sm:text-[44px] lg:text-[56px] leading-[1.05] m-0 font-extrabold text-ink tracking-[-0.02em]">
               Parlons de <span className="text-plum">votre chien.</span> 💜
             </h2>
             <p className="text-[16px] leading-[1.6] text-ink/70 mt-5 max-w-[420px]">

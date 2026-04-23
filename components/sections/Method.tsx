@@ -36,12 +36,12 @@ const STEPS: Step[] = [
 export default function Method() {
   return (
     <section className="bg-sand-light relative overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
-        <Reveal className="text-center mb-12 lg:mb-16 max-w-[640px] mx-auto">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+        <Reveal className="text-center mb-10 sm:mb-12 lg:mb-16 max-w-[640px] mx-auto">
           <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
             Comment ça se passe
           </div>
-          <h2 className="text-[32px] sm:text-[38px] lg:text-[44px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em]">
+          <h2 className="text-[28px] sm:text-[34px] lg:text-[44px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em]">
             Une méthode simple, en{" "}
             <span className="text-plum">3 étapes.</span>
           </h2>

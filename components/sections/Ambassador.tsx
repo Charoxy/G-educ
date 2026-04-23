@@ -42,7 +42,7 @@ export default function Ambassador() {
         className="absolute pointer-events-none"
         style={{ top: -100, right: -100 }}
       />
-      <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-10 lg:gap-16 items-center">
           <Reveal direction="right">
             <div
@@ -56,7 +56,7 @@ export default function Ambassador() {
             >
               💜 Programme ambassadeur
             </div>
-            <h2 className="text-[36px] sm:text-[42px] lg:text-[52px] leading-[1.05] m-0 font-extrabold tracking-[-0.02em]">
+            <h2 className="text-[30px] sm:text-[40px] lg:text-[52px] leading-[1.05] m-0 font-extrabold tracking-[-0.02em]">
               Vos amis vous font confiance ?<br />
               <span className="text-peach">Ça mérite une récompense.</span>
             </h2>
@@ -81,23 +81,20 @@ export default function Ambassador() {
             {TIERS.map((t) => (
               <StaggerItem key={t.tier}>
               <div
-                className="grid items-center transition-transform duration-300 hover:translate-x-1"
+                className="flex items-center gap-4 sm:gap-5 transition-transform duration-300 hover:translate-x-1 px-4 py-4 sm:px-6 sm:py-5"
                 style={{
                   background: t.bg,
                   color: t.text,
                   borderRadius: 24,
-                  padding: "20px 24px",
-                  gridTemplateColumns: "auto 1fr auto",
-                  gap: 20,
                 }}
               >
                 <div
-                  className="w-14 h-14 rounded-full flex items-center justify-center text-[24px]"
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-[22px] sm:text-[24px] shrink-0"
                   style={{ background: "rgba(255,255,255,0.5)" }}
                 >
                   {t.icon}
                 </div>
-                <div>
+                <div className="min-w-0">
                   <div
                     className="uppercase font-bold opacity-70"
                     style={{
@@ -107,11 +104,15 @@ export default function Ambassador() {
                   >
                     Palier {t.tier}
                   </div>
-                  <div className="text-[16px] sm:text-[18px] font-extrabold mt-1">
-                    {t.n} {t.filleuls} · {t.reward}
+                  <div className="text-[14px] sm:text-[16px] lg:text-[18px] font-extrabold mt-1 leading-tight">
+                    <span className="block sm:inline">{t.n} {t.filleuls}</span>
+                    <span className="hidden sm:inline"> · </span>
+                    <span className="block sm:inline opacity-90 font-bold sm:font-extrabold">
+                      {t.reward}
+                    </span>
                   </div>
                 </div>
-                <div className="text-[28px] font-extrabold opacity-30">→</div>
+                <div className="text-[24px] sm:text-[28px] font-extrabold opacity-30 hidden sm:block">→</div>
               </div>
               </StaggerItem>
             ))}

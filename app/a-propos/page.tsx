@@ -62,13 +62,13 @@ export default function AProposPage() {
             className="absolute opacity-50 pointer-events-none"
             style={{ top: -80, right: -80 }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-14 pb-20">
+          <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-12 sm:pb-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
               <div>
                 <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
                   À propos de moi
                 </div>
-                <h1 className="text-[40px] sm:text-[50px] lg:text-[60px] leading-[1.05] m-0 font-extrabold text-ink tracking-[-0.02em]">
+                <h1 className="text-[32px] sm:text-[44px] lg:text-[60px] leading-[1.05] m-0 font-extrabold text-ink tracking-[-0.02em]">
                   Moi, c&rsquo;est{" "}
                   <span className="highlight-lavender">Gaëlle.</span>
                   <br />
@@ -87,20 +87,18 @@ export default function AProposPage() {
                   et toute la passion qui m&rsquo;habite depuis toujours.
                 </p>
               </div>
-              <div className="relative max-w-[460px] mx-auto lg:mx-0">
+              <div className="relative max-w-[460px] mx-auto lg:mx-0 w-full">
                 <PlaceholderImg
                   label="Gaëlle Genly"
                   tone="plum"
                   radius={32}
                   width="100%"
-                  height={540}
+                  height={460}
                 />
                 <div
-                  className="absolute bg-peach text-ink max-w-[220px]"
+                  className="absolute bg-peach text-ink max-w-[200px] sm:max-w-[220px] left-0 sm:-left-6 -bottom-6"
                   style={{
-                    bottom: -24,
-                    left: -24,
-                    padding: "18px 24px",
+                    padding: "16px 20px",
                     borderRadius: 20,
                     boxShadow: "0 12px 30px -10px rgba(184,110,82,0.4)",
                   }}
@@ -119,14 +117,14 @@ export default function AProposPage() {
         </section>
 
         <section className="bg-sand-light">
-          <div className="max-w-[820px] mx-auto px-5 sm:px-8 lg:px-12 py-20">
+          <div className="max-w-[820px] mx-auto px-4 sm:px-8 lg:px-12 py-14 sm:py-20">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5 text-center">
               Mon histoire
             </div>
             <h2 className="text-[28px] sm:text-[36px] lg:text-[40px] m-0 font-extrabold text-ink text-center tracking-[-0.02em] mb-10">
               Comment je suis arrivée ici.
             </h2>
-            <div className="text-[16px] sm:text-[17px] leading-[1.8] text-ink/85 space-y-5">
+            <div className="text-[15px] sm:text-[17px] leading-[1.8] text-ink/85 space-y-5">
               <p>
                 Je ne me souviens pas d&rsquo;un moment de ma vie sans animaux.
                 Enfant, j&rsquo;étais toujours dehors, les mains dans la boue, à
@@ -175,8 +173,8 @@ export default function AProposPage() {
         </section>
 
         <section className="bg-bone">
-          <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20">
-            <div className="text-center mb-14">
+          <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-14 sm:py-20">
+            <div className="text-center mb-10 sm:mb-14">
               <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
                 Mon parcours
               </div>
@@ -248,7 +246,7 @@ export default function AProposPage() {
             className="absolute pointer-events-none"
             style={{ top: -100, right: -100 }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20">
+          <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-14 sm:py-20">
             <div className="text-center mb-12">
               <div className="text-[12px] text-peach tracking-[0.18em] uppercase font-bold mb-3.5">
                 Mes valeurs

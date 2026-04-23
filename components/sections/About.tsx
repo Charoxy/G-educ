@@ -21,9 +21,9 @@ export default function About() {
         style={{ top: 100, left: -80 }}
       />
 
-      <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-10 lg:gap-14 items-center">
-          <Reveal direction="right" className="relative max-w-[420px]">
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-10 md:gap-10 lg:gap-14 items-center">
+          <Reveal direction="right" className="relative w-full max-w-[420px] mx-auto md:mx-0">
             <PlaceholderImg
               label="Gaëlle Genly"
               tone="lavender"
@@ -54,7 +54,7 @@ export default function About() {
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               À propos de moi
             </div>
-            <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] leading-[1.05] m-0 font-extrabold text-ink tracking-[-0.02em]">
+            <h2 className="text-[28px] sm:text-[36px] md:text-[34px] lg:text-[48px] leading-[1.05] m-0 font-extrabold text-ink tracking-[-0.02em]">
               Gaëlle, 21 ans,
               <br />
               <span className="highlight-lavender">amoureuse des animaux</span>{" "}

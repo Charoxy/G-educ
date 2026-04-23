@@ -102,33 +102,32 @@ export default function PrestationsPage() {
             className="absolute opacity-60 pointer-events-none"
             style={{ bottom: -40, left: -60 }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-14 pb-12 text-center">
+          <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-10 sm:pb-12 text-center">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               Prestations &amp; tarifs
             </div>
-            <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[800px] mx-auto">
+            <h1 className="text-[28px] sm:text-[40px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[800px] mx-auto">
               Trois formules, <span className="text-plum">un seul objectif :</span>
               <br className="hidden sm:block" />
               <span className="sm:inline"> votre tranquillité, celle de votre chien.</span>
             </h1>
-            <p className="text-[16px] leading-[1.65] text-ink/70 max-w-[600px] mx-auto mt-5">
+            <p className="text-[15px] sm:text-[16px] leading-[1.65] text-ink/70 max-w-[600px] mx-auto mt-4 sm:mt-5">
               Tarifs transparents, devis clair avant chaque prestation, déplacements
               inclus dans un rayon de 30 km autour de Cambrai.
             </p>
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pb-20">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pb-16 sm:pb-20">
           <div className="flex flex-col gap-7">
             {PRESTA.map((p, i) => (
               <div
                 key={i}
-                className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-8 lg:gap-12 relative"
+                className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-6 sm:gap-8 lg:gap-12 relative p-6 sm:p-8 lg:p-10"
                 style={{
                   background: p.featured ? "#6b4a7a" : "#fbf6ec",
                   color: p.featured ? "#fbf6ec" : "#2a2438",
-                  borderRadius: 32,
-                  padding: "32px 28px",
+                  borderRadius: 28,
                   border: p.featured
                     ? "none"
                     : `1.5px solid ${TONE_BORDER[p.tone]}`,
@@ -139,10 +138,9 @@ export default function PrestationsPage() {
               >
                 {p.featured && (
                   <div
-                    className="absolute bg-peach text-ink uppercase font-extrabold"
+                    className="absolute bg-peach text-ink uppercase font-extrabold left-4 sm:left-7 lg:left-10"
                     style={{
                       top: -12,
-                      left: 28,
                       fontSize: 11,
                       letterSpacing: "0.12em",
                       padding: "6px 14px",
@@ -153,13 +151,13 @@ export default function PrestationsPage() {
                   </div>
                 )}
                 <div>
-                  <div className="flex items-center gap-3.5 mb-3.5">
-                    <span className="text-[32px]">{p.icon}</span>
-                    <div>
-                      <h2 className="text-[24px] sm:text-[30px] font-extrabold m-0">
+                  <div className="flex items-start sm:items-center gap-3 sm:gap-3.5 mb-3.5">
+                    <span className="text-[28px] sm:text-[32px] shrink-0">{p.icon}</span>
+                    <div className="min-w-0">
+                      <h2 className="text-[20px] sm:text-[26px] lg:text-[30px] font-extrabold m-0 leading-tight">
                         {p.title}
                       </h2>
-                      <div className="text-[13px] opacity-70 mt-0.5">
+                      <div className="text-[12.5px] sm:text-[13px] opacity-70 mt-0.5">
                         {p.subtitle}
                       </div>
                     </div>
@@ -192,13 +190,12 @@ export default function PrestationsPage() {
                   </div>
                 </div>
                 <div
-                  className="text-center self-start"
+                  className="text-center self-start p-6 sm:p-7"
                   style={{
                     background: p.featured
                       ? "rgba(251,246,236,0.1)"
                       : "#f5ede0",
                     borderRadius: 20,
-                    padding: "28px 28px",
                   }}
                 >
                   <div className="text-[12px] tracking-[0.15em] uppercase font-bold opacity-70 mb-2.5">
@@ -206,13 +203,13 @@ export default function PrestationsPage() {
                   </div>
                   <div className="flex items-baseline gap-2 justify-center">
                     <span
-                      className="text-[64px] font-extrabold leading-none"
+                      className="text-[52px] sm:text-[64px] font-extrabold leading-none"
                       style={{ color: TONE_PRICE[p.tone] }}
                     >
                       {p.price}
                     </span>
                     <span
-                      className="text-[24px] font-extrabold"
+                      className="text-[22px] sm:text-[24px] font-extrabold"
                       style={{ color: TONE_PRICE[p.tone] }}
                     >
                       €

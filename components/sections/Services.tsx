@@ -5,12 +5,12 @@ import { StaggerGroup, StaggerItem } from "../motion/Stagger";
 export default function Services() {
   return (
     <section className="relative">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
-        <Reveal className="text-center mb-14">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+        <Reveal className="text-center mb-10 sm:mb-12 lg:mb-14">
           <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
             Prestations &amp; tarifs
           </div>
-          <h2 className="text-[32px] sm:text-[40px] lg:text-[48px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em]">
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[48px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em]">
             Choisissez la formule qui{" "}
             <span className="highlight-sage">vous ressemble.</span>
           </h2>

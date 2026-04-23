@@ -114,11 +114,11 @@ export default function BlogPage() {
             className="absolute opacity-50 pointer-events-none"
             style={{ top: -60, right: -60 }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-14 pb-12 text-center">
+          <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-10 sm:pb-12 text-center">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               Le blog de G&rsquo;educ
             </div>
-            <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[740px] mx-auto">
+            <h1 className="text-[28px] sm:text-[40px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[740px] mx-auto">
               Conseils, <span className="text-plum">décryptages</span>,
               <br />
               et histoires de duos.
@@ -130,18 +130,16 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pb-8 text-center">
-          <div className="inline-flex gap-2.5 flex-wrap justify-center">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pb-6 sm:pb-8 text-center overflow-x-auto">
+          <div className="flex sm:inline-flex gap-2 sm:gap-2.5 flex-nowrap sm:flex-wrap justify-start sm:justify-center pb-2 sm:pb-0">
             {CATEGORIES.map(([l, bg, c, active]) => (
               <button
                 key={l}
-                className="cursor-pointer font-bold"
+                className="cursor-pointer font-bold whitespace-nowrap shrink-0 px-4 sm:px-5 py-2 sm:py-2.5 text-[12px] sm:text-[13px]"
                 style={{
                   background: bg,
                   color: c,
-                  padding: "10px 20px",
                   borderRadius: 999,
-                  fontSize: 13,
                   border: active
                     ? "2px solid #6b4a7a"
                     : "2px solid transparent",
@@ -153,10 +151,10 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-8">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-6 sm:py-8">
           <div
-            className="bg-sand-light grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center"
-            style={{ borderRadius: 32, padding: 24 }}
+            className="bg-sand-light grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center p-4 sm:p-6"
+            style={{ borderRadius: 28 }}
           >
             <PlaceholderImg
               label="Photo d'article"
@@ -195,7 +193,7 @@ export default function BlogPage() {
                   {featured.date} · {featured.read} de lecture
                 </span>
               </div>
-              <h2 className="text-[22px] sm:text-[28px] lg:text-[32px] m-0 font-extrabold text-ink leading-[1.2] tracking-[-0.01em]">
+              <h2 className="text-[20px] sm:text-[24px] lg:text-[32px] m-0 font-extrabold text-ink leading-[1.2] tracking-[-0.01em]">
                 {featured.title}
               </h2>
               <p className="text-[15px] leading-[1.65] text-ink/75 mt-4">
@@ -211,8 +209,8 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pb-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pb-12 sm:pb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {rest.map((a, i) => (
               <article
                 key={i}
@@ -259,16 +257,16 @@ export default function BlogPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pb-20">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pb-16 sm:pb-20">
           <div
-            className="bg-lavender grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
-            style={{ borderRadius: 32, padding: "32px 32px" }}
+            className="bg-lavender grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center p-6 sm:p-8"
+            style={{ borderRadius: 28 }}
           >
             <div>
               <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-2.5">
                 Newsletter · 1 email / mois
               </div>
-              <h3 className="text-[24px] sm:text-[28px] lg:text-[32px] m-0 font-extrabold text-ink tracking-[-0.01em]">
+              <h3 className="text-[22px] sm:text-[26px] lg:text-[32px] m-0 font-extrabold text-ink tracking-[-0.01em] leading-tight">
                 Recevez mes meilleurs conseils, une fois par mois.
               </h3>
               <p className="text-[14.5px] text-ink/75 leading-[1.6] mt-3">

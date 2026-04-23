@@ -99,8 +99,8 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
     <div
-      className="bg-bone border border-lavender"
-      style={{ borderRadius: 20, padding: "24px 28px" }}
+      className="bg-bone border border-lavender p-5 sm:p-7"
+      style={{ borderRadius: 20 }}
     >
       <button
         onClick={() => setOpen((v) => !v)}
@@ -136,11 +136,11 @@ export default function FAQPage() {
             className="absolute opacity-50 pointer-events-none"
             style={{ top: -60, left: -60 }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-14 pb-12 text-center">
+          <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-10 sm:pb-12 text-center">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               Questions fréquentes
             </div>
-            <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[740px] mx-auto">
+            <h1 className="text-[28px] sm:text-[40px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[740px] mx-auto">
               Vous avez des questions ?<br />
               <span className="text-plum">J&rsquo;ai des réponses.</span>
             </h1>
@@ -151,7 +151,7 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="max-w-[900px] mx-auto px-5 sm:px-8 lg:px-12 py-8 pb-20">
+        <section className="max-w-[900px] mx-auto px-4 sm:px-8 lg:px-12 py-6 sm:py-8 pb-16 sm:pb-20">
           <div className="flex flex-col gap-12">
             {FAQS.map((section, i) => (
               <div key={i}>
@@ -178,10 +178,10 @@ export default function FAQPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pb-20">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pb-16 sm:pb-20">
           <div
-            className="bg-plum text-bone flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-8"
-            style={{ borderRadius: 32, padding: "40px 40px" }}
+            className="bg-plum text-bone flex flex-col sm:flex-row justify-between items-start sm:items-center gap-5 sm:gap-8 p-7 sm:p-10"
+            style={{ borderRadius: 28 }}
           >
             <div>
               <h3 className="text-[24px] sm:text-[28px] lg:text-[32px] m-0 font-extrabold">
@@ -193,11 +193,9 @@ export default function FAQPage() {
               </p>
             </div>
             <button
-              className="bg-peach text-ink border-0 font-extrabold cursor-pointer shrink-0"
+              className="bg-peach text-ink border-0 font-extrabold cursor-pointer shrink-0 w-full sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 text-[13px] sm:text-[14px]"
               style={{
-                padding: "16px 32px",
                 borderRadius: 999,
-                fontSize: 14,
                 fontFamily: "inherit",
               }}
             >

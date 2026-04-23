@@ -110,17 +110,17 @@ export default function TemoignagesPage() {
             className="absolute pointer-events-none"
             style={{ top: -80, left: -80, opacity: 0.35 }}
           />
-          <div className="relative max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-14 pb-8 text-center">
+          <div className="relative max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-10 sm:pt-14 pb-8 text-center">
             <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
               Témoignages
             </div>
-            <h1 className="text-[36px] sm:text-[44px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[760px] mx-auto">
+            <h1 className="text-[28px] sm:text-[40px] lg:text-[56px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em] max-w-[760px] mx-auto">
               De vrais duos,{" "}
               <span className="text-plum">de vraies histoires,</span>
               <br className="hidden sm:block" />
               <span className="sm:inline"> de vrais changements.</span>
             </h1>
-            <div className="mt-7 inline-flex flex-wrap gap-6 sm:gap-7 items-center justify-center bg-sand-light px-7 py-4 rounded-full">
+            <div className="mt-7 inline-flex flex-wrap gap-5 sm:gap-7 items-center justify-center bg-sand-light px-5 sm:px-7 py-3 sm:py-4 rounded-3xl sm:rounded-full">
               <div>
                 <div className="text-[24px] font-extrabold text-ink">
                   4.9
@@ -146,13 +146,13 @@ export default function TemoignagesPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pt-8 pb-20">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pt-8 pb-16 sm:pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {QUOTES.map((q, i) => (
               <div
                 key={i}
-                className="bg-bone border border-lavender"
-                style={{ borderRadius: 28, padding: "32px 32px" }}
+                className="bg-bone border border-lavender p-6 sm:p-8"
+                style={{ borderRadius: 28 }}
               >
                 <div className="flex gap-4 mb-5 items-start">
                   <div
@@ -184,10 +184,10 @@ export default function TemoignagesPage() {
           </div>
         </section>
 
-        <section className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 pb-20">
+        <section className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 pb-16 sm:pb-20">
           <div
-            className="bg-sand-light flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-8 flex-wrap"
-            style={{ borderRadius: 32, padding: "28px 32px" }}
+            className="bg-sand-light flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-8 flex-wrap p-6 sm:p-8"
+            style={{ borderRadius: 28 }}
           >
             <div>
               <div className="text-[12px] text-plum tracking-[0.15em] uppercase font-bold mb-2">

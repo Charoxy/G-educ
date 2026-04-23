@@ -10,10 +10,33 @@ body {
   color: #2a2438;
   font-family: 'Nunito', -apple-system, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Prevent iOS auto-zoom when focusing form fields (font-size must be ≥ 16px on mobile) */
+@media (max-width: 640px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
+/* Touch targets ≥ 44px on coarse pointers */
+@media (pointer: coarse) {
+  button,
+  a[role="button"],
+  .touch-target {
+    min-height: 44px;
+  }
 }
 
 @layer utilities {
@@ -24,5 +47,27 @@ body {
   .highlight-sage {
     background: linear-gradient(180deg, transparent 65%, #c2cfb5 65%);
     padding: 0 4px;
+  }
+  .container-x {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 480px) {
+    .container-x {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  }
+  @media (min-width: 640px) {
+    .container-x {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-x {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
   }
 }

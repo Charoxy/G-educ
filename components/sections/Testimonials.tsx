@@ -36,12 +36,12 @@ const QUOTES: Quote[] = [
 export default function Testimonials() {
   return (
     <section className="bg-sand-light">
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 lg:px-12 py-20 lg:py-24">
-        <Reveal className="text-center mb-14">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-8 lg:px-12 py-16 sm:py-20 lg:py-24">
+        <Reveal className="text-center mb-10 sm:mb-12 lg:mb-14">
           <div className="text-[12px] text-plum tracking-[0.18em] uppercase font-bold mb-3.5">
             Ils m&rsquo;ont fait confiance
           </div>
-          <h2 className="text-[32px] sm:text-[38px] lg:text-[46px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em]">
+          <h2 className="text-[28px] sm:text-[34px] lg:text-[46px] leading-[1.1] m-0 font-extrabold text-ink tracking-[-0.02em]">
             De vraies histoires,{" "}
             <span className="text-plum">de vrais changements.</span>
           </h2>
@@ -54,15 +54,14 @@ export default function Testimonials() {
           {QUOTES.map((q, i) => (
             <StaggerItem key={i}>
             <div
-              className="bg-bone border border-lavender flex flex-col h-full transition-shadow duration-300 hover:shadow-[0_24px_40px_-20px_rgba(107,74,122,0.25)]"
+              className={`bg-bone border border-lavender flex flex-col h-full transition-shadow duration-300 hover:shadow-[0_24px_40px_-20px_rgba(107,74,122,0.25)] ${
+                i === 1
+                  ? "lg:-translate-y-3 lg:shadow-[0_24px_40px_-20px_rgba(107,74,122,0.25)]"
+                  : ""
+              }`}
               style={{
                 borderRadius: 28,
                 padding: "32px 28px",
-                transform: i === 1 ? "translateY(-12px)" : "none",
-                boxShadow:
-                  i === 1
-                    ? "0 24px 40px -20px rgba(107,74,122,0.25)"
-                    : undefined,
               }}
             >
               <div className="text-[18px] text-peach mb-3">★★★★★</div>
